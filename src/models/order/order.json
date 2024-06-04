@@ -1,0 +1,28 @@
+{
+  "name": "Order",
+  "plural": "Orders",
+  "properties": {
+    "number": {
+      "type": "number",
+      "required": true
+    },
+    "status": {
+      "type": "string"
+    },
+    "breadType": {
+      "type": "string"
+    },
+    "spreadType": {
+      "type": "string"
+    },
+    "sauceType": {
+      "type": "string"
+    },
+    "smos": {
+      "type": "boolean"
+    },
+    "price": {
+      "type": "number"
+    }
+  }
+}
