@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Lisonallie/broodjeszak-ogni/issues"
   },
-  "homepage": "https://github.com/Lisonallie/broodjeszak-ogni#readme"
+  "homepage": "https://github.com/Lisonallie/broodjeszak-ogni#readme",
+  "dependencies": {
+    "d3-fetch": "^3.0.1"
+  }
 }
