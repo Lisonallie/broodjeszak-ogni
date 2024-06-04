@@ -21,8 +21,8 @@ export function fetchSaucesFromList(list) {
  * @param name {string} - the name of a sauce
  */
 export function fetchSauceByName(name = "geen") {
-	const breads = fetchBreadsFromList(sandwichData);
-	if (breads.includes(name)) {
+	const sauces = fetchSaucesFromList(sandwichData);
+	if (sauces.includes(name)) {
 		const sandwichWithPrice = sandwichData.find((entry) => entry.item === name);
 		return {sauce: sandwichWithPrice.item, price: sandwichWithPrice.prijs};
 	}
