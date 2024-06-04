@@ -20,7 +20,7 @@ function fetchSaucesFromList(list) {
  * Find a sauce's data by name
  * @param name {string} - the name of a sauce
  */
-function fetchSauceByType(name = "geen") {
+function fetchSauceByName(name = "geen") {
 	const breads = fetchBreadsFromList(sandwichData);
 	if (breads.includes(name)) {
 		const sandwichWithPrice = sandwichData.find((entry) => entry.item === name);
@@ -29,3 +29,9 @@ function fetchSauceByType(name = "geen") {
 	return {sauce: "geen", price: 0};
 }
 
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+exports.sauces = fetchSaucesFromList;
+exports.fetchSauceByName = fetchSauceByName;

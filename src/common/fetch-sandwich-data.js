@@ -1,12 +1,27 @@
 #!/usr/bin/env node
 "use strict";
 
-import { csv } from 'd3-fetch';
-import csvFile from '../assets/Broodjesprijzen.csv';
+const sandwichArr = [
+	{item: "wit", prijs: 200},
+	{item: "bruin", prijs: 200},
+	{item: "waldkorn", prijs: 220},
+	{item: "multigranen", prijs: 230},
+	{item: "kaas", prijs: 50},
+	{item: "ham", prijs: 50},
+	{item: "kipCurry", prijs: 60},
+	{item: "americain", prijs: 70},
+	{item: "krabsla", prijs: 70},
+	{item: "gebakkenKip", prijs: 70},
+	{item: "mayonaise", prijs: 30},
+	{item: "ketchup", prijs: 30},
+	{item: "pepersaus", prijs: 30},
+	{item: "andalouse", prijs: 30},
+	{item: "cocktail", prijs: 30},
+	{item: "smos", prijs: 50}
+];
 
-const sandwichData = await csv(csvFile);
-console.log(sandwichData);
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
 
-if (require.main === module) {
-	module.exports = sandwichData;
-}
+exports.sandwichData = sandwichArr;

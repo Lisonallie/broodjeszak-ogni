@@ -20,7 +20,7 @@ function fetchSpreadsFromList(list) {
  * Find a spread's data by name
  * @param name {string} - the name of a spread
  */
-function fetchSpreadByType(name) {
+function fetchSpreadByName(name) {
 	const spreads = fetchSpreadsFromList(sandwichData);
 	if (spreads.includes(name)) {
 		const sandwichWithPrice = sandwichData.find((entry) => entry.item === name);
@@ -30,3 +30,10 @@ function fetchSpreadByType(name) {
 		{statusCode: 412, code: "spreadRequired"}
 	);
 }
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+exports.spreads = fetchSpreadsFromList;
+exports.fetchSpreadByName = fetchSpreadByName;
