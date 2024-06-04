@@ -1,0 +1,10 @@
+{
+  "name": "Bread",
+  "plural": "Breads",
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

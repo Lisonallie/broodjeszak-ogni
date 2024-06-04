@@ -1,0 +1,10 @@
+{
+  "name": "Sauce",
+  "plural": "Sauces",
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

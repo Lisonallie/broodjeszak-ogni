@@ -1,0 +1,10 @@
+{
+  "name": "Spread",
+  "plural": "Spreads",
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
