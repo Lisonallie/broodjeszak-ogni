@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/Lisonallie/broodjeszak-ogni.git"
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Lisonallie/broodjeszak-ogni/issues"
   },
-  "homepage": "https://github.com/Lisonallie/broodjeszak-ogni#readme"
+  "homepage": "https://github.com/Lisonallie/broodjeszak-ogni#readme",
+  "dependencies": {
+    "d3-fetch": "^3.0.1"
+  }
 }
