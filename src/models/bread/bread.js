@@ -6,7 +6,7 @@ import sandwichData from "../../common/fetch-sandwich-data.js";
  * Fetch all sandwich data and find the 'bread' entries
  * @param list - a collection of entries from a csv file containing sandwich data
  */
-const fetchBreadsFromList = function(list) {
+export const fetchBreadsFromList = function(list) {
 	let breads = [];
 	for (const entry of list) {
 		if (entry.prijs >= 200) {
@@ -20,7 +20,7 @@ const fetchBreadsFromList = function(list) {
  * Find a bread's data by name
  * @param name {string} - the name of a bread
  */
-const fetchBreadByName = function(name = "geen") {
+export const fetchBreadByName = function(name = "geen") {
 	const breads = fetchBreadsFromList(sandwichData);
 	if (breads.includes(name)) {
 		const sandwichWithPrice = sandwichData.find((entry) => entry.item === name);
@@ -29,11 +29,5 @@ const fetchBreadByName = function(name = "geen") {
 	return {bread: "geen", price: 0};
 }
 
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-exports.breads = fetchBreadsFromList;
-exports.fetchBreadByName = fetchBreadByName;
-
-
+const first = "default";
+export default first;

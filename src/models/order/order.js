@@ -1,27 +1,27 @@
 #!/usr/bin/env node
 "use strict";
 
-const fs = require('node:fs');
-import breads from "../bread/bread.js";
-import spreads from "../spread/spread.js";
-import sauces from "../sauce/sauce.js";
-import {sandwichData} from "../../common/fetch-sandwich-data.js";
+import fs from "fs";
+import sandwichData from "../../common/fetch-sandwich-data.js";
+import {fetchSpreadsFromList} from "../spread/spread.js";
+import {fetchBreadsFromList} from "../bread/bread.js";
+import {fetchSaucesFromList} from "../sauce/sauce.js";
 
 const createdOrders = [];
 
-function calculateOrder(orderObj) {
-	const breadPrice = breads.find((entry) => entry.item === orderObj.bread)?.prijs || 0;
-	const spreadPrice = spreads.find((entry) => entry.item === orderObj.spread)?.prijs || 0;
-	const saucePrice = sauces.find((entry) => entry.item === orderObj.sauce)?.prijs || 0;
+export function calculateOrder(orderObj) {
+	const breadPrice = fetchBreadsFromList().find((entry) => entry.item === orderObj.bread)?.prijs || 0;
+	const spreadPrice = fetchSpreadsFromList().find((entry) => entry.item === orderObj.spread)?.prijs || 0;
+	const saucePrice = fetchSaucesFromList().find((entry) => entry.item === orderObj.sauce)?.prijs || 0;
 	const smos = orderObj.smos ? sandwichData.find((entry) => entry.item === "smos").prijs : 0;
 	return breadPrice + spreadPrice + saucePrice + smos;
 }
 
-function createOrder(orderObj) {
+export function createOrder(orderObj) {
 	createdOrders.push({orderNumber: Math.round(Math.random() * 100) , order: orderObj, date: new Date(), status: "todo"});
 }
 
-function completeOrder(orderNumber) {
+export function completeOrder(orderNumber) {
 	let order = createdOrders.find((order) => order.orderNumber === orderNumber);
 	order.status = "finished";
 	const orderContent = `
@@ -47,16 +47,11 @@ function completeOrder(orderNumber) {
 	return order;
 }
 
-function cancelOrder(orderNumber) {
+export function cancelOrder(orderNumber) {
 	let order = createdOrders.find((order) => order.orderNumber === orderNumber && order.order.status !== "cancelled");
 	order.status = "cancelled";
 	return order;
 }
 
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-exports.calculateOrder = calculateOrder;
-exports.placeOrder = createOrder;
-exports.cancelOrder = cancelOrder;
+const first = "default";
+export default first;

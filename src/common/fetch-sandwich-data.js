@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 "use strict";
 
-const sandwichArr = [
+const sandwichData = [
 	{item: "wit", prijs: 200},
 	{item: "bruin", prijs: 200},
 	{item: "waldkorn", prijs: 220},
@@ -20,8 +20,4 @@ const sandwichArr = [
 	{item: "smos", prijs: 50}
 ];
 
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-exports.sandwichData = sandwichArr;
+export default sandwichData;
