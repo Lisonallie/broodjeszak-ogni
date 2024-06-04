@@ -1,0 +1,19 @@
+{
+  "name": "broodjeszak-ogni",
+  "version": "1.0.0",
+  "description": "A small project consisting of the backend for a sandwich shop with methods for requesting all types of bread, spreads, and/or sauces. Calculating the price of an order and placing the order is also possible, as is cancelling an order.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Lisonallie/broodjeszak-ogni.git"
+  },
+  "author": "Allison Van Linden",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Lisonallie/broodjeszak-ogni/issues"
+  },
+  "homepage": "https://github.com/Lisonallie/broodjeszak-ogni#readme"
+}
